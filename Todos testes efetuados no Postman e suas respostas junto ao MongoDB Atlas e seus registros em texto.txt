@@ -1,0 +1,395 @@
+Desafio: AMIGO SECRETO de 2 API's convite-service e listadesejos-service
+DISCIPLINA: Desenvolvimento de Produtos de Software III - Módulo IX
+ALUNO: Júlio César RA-042401
+
+**********************************
+API  CONVITE-SERVICE DESAFIO
+**********************************
+Rota usada para enviar o E-mail:
+
+Método usado POST => http://localhost:3000/convite/enviaremail
+
+Body usado para enviar requisição via(Postman):
+
+{
+    "email": "juc.silva1@gmail.com, marcomoreira@uniaraxa.edu.br, mylenalopes@uniaraxa.edu.br",
+    "assunto": "Enviando e-mail para Tutor(a) e o Professor do Desafio da Disciplina Desenvolvimento de Produtos de Software III",
+    "mensagem": "Olá, você está convidado para participar da lista de desejos do nosso grupo do Amigo Secreto enviado para teste pelo aluno JULIO CESAR RA-042401 com o endereço do github  a seguir https://github.com/jucsilva1."
+}
+resposta obtida:
+
+E-mail enviado com sucesso
+
+****************************************************************************************
+				FIM CONVITE-SERVICE DESAFIO
+****************************************************************************************
+
+**********************************
+API LISTADESEJOS-SERVICE
+**********************************
+Rota (criarListaItem) usada para criar itens na lista pelo idGrupo e idParticipante:
+
+Método usado POST => http://localhost:3333/
+
+Body usado para enviar requisição primeiro(a)(Mylena) Participante do Grupo via(Postman):
+{
+
+  "idGrupo": "63fbe9b537013e5f5384de45",
+  "NomeGrupo": "Amigo Secreto Desafio UNIARAXÁ",
+  "idParticipante": "63fa414d306f4151724b7c11",
+  "NomeParticipante": "Mylena",
+  "listaItens": ["Chocolate", "Celular"]
+}
+
+Resposta obtida:
+{
+    "success": true,
+    "listaDesejos": {
+        "idGrupo": "63fbe9b537013e5f5384de45",
+        "NomeGrupo": "Amigo Secreto Desafio UNIARAXÁ",
+        "idParticipante": "63fa414d306f4151724b7c11",
+        "NomeParticipante": "Mylena",
+        "listaItens": [
+            "Chocolate",
+            "Celular"
+        ],
+        "_id": "640dedf07c288d93a9e67d88",
+        "__v": 0
+    }
+}
+********************************************
+Gravação no BD dentro do MongoDB ATLAS:
+********************************************
+_id 640dedf07c288d93a9e67d88
+idGrupo 63fbe9b537013e5f5384de45
+NomeGrupo "Amigo Secreto Desafio UNIARAXÁ"
+idParticipante 63fa414d306f4151724b7c11
+NomeParticipante "Mylena"
+
+listaItens
+Array
+0
+"Chocolate"
+1
+"Celular"
+__v 0
+****************************************************************************************
+****************************************************************************************
+
+Rota (criarListaItem) usada para criar itens na lista pelo idGrupo e idParticipante:
+
+Método usado POST => http://localhost:3333/
+
+Body usado para enviar requisição segundo(a) (Marco Moreira) Participante do Grupo via(Postman):
+{
+
+  "idGrupo": "63fbe9b537013e5f5384de45",
+  "NomeGrupo": "Amigo Secreto Desafio UNIARAXÁ",
+  "idParticipante": "63fa414d306f4151724b7c11",
+  "NomeParticipante": "Marco Moreira",
+  "listaItens": ["Bola", "Mouse s/ fio", "Teclado"]
+}
+Resposta obtida:
+{
+    "success": true,
+    "listaDesejos": {
+        "idGrupo": "63fbe9b537013e5f5384de45",
+        "NomeGrupo": "Amigo Secreto Desafio UNIARAXÁ",
+        "idParticipante": "63fa414d306f4151724b7c11",
+        "NomeParticipante": "Marco Moreira",
+        "listaItens": [
+            "Bola",
+            "Mouse s/ fio",
+            "Teclado"
+        ],
+        "_id": "640df0a97c288d93a9e67d8a",
+        "__v": 0
+    }
+}
+********************************************
+Gravação no BD dentro do MongoDB ATLAS:
+********************************************
+_id 640df0a97c288d93a9e67d8a
+idGrupo 63fbe9b537013e5f5384de45
+NomeGrupo "Amigo Secreto Desafio UNIARAXÁ"
+idParticipante 63fa414d306f4151724b7c11
+NomeParticipante "Marco Moreira"
+listaItens
+Array
+0
+"Bola"
+1
+"Mouse s/ fio"
+2
+"Teclado"
+__v 0
+****************************************************************************************
+****************************************************************************************
+Rota (criarListaItem) usada para criar itens na lista pelo idGrupo e idParticipante:
+
+Método usado POST => http://localhost:3333/
+
+Body usado para enviar requisição terceiro(a) (Júlio César) Participante do Grupo via(Postman):
+{
+
+  "idGrupo": "63fbe9b537013e5f5384de45",
+  "NomeGrupo": "Amigo Secreto Desafio UNIARAXÁ",
+  "idParticipante": "63fa414d306f4151724b7c11",
+  "NomeParticipante": "Júlio César",
+  "listaItens": ["PenDrive", "Monitor", "HD Externo"]
+}
+Resposta obtida:
+{
+    "success": true,
+    "listaDesejos": {
+        "idGrupo": "63fbe9b537013e5f5384de45",
+        "NomeGrupo": "Amigo Secreto Desafio UNIARAXÁ",
+        "idParticipante": "63fa414d306f4151724b7c11",
+        "NomeParticipante": "Júlio César",
+        "listaItens": [
+            "PenDrive",
+            "Monitor",
+            "HD Externo"
+        ],
+        "_id": "640df1c57c288d93a9e67d8c",
+        "__v": 0
+    }
+}
+********************************************
+Gravação no BD dentro do MongoDB ATLAS:
+********************************************
+_id 640df1c57c288d93a9e67d8c
+idGrupo 63fbe9b537013e5f5384de45
+NomeGrupo "Amigo Secreto Desafio UNIARAXÁ"
+idParticipante 63fa414d306f4151724b7c11
+NomeParticipante "Júlio César"
+listaItens
+Array
+0
+"PenDrive"
+1
+"Monitor"
+2
+"HD Externo"
+__v 0
+****************************************************************************************
+			FIM CADASTRO DA LISTA DE DESEJOS
+****************************************************************************************
+
+******************************************************
+MOSTRAR ITENS DA LISTA PELO ID DA LISTA (ObjetoId)
+******************************************************
+(_id 640dedf07c288d93a9e67d88 Mylena)
+Método usado GET => http://localhost:3333/640dedf07c288d93a9e67d88/item/
+
+Resposta obtida:
+{
+    "message": "Itens da lista de desejos recuperados com sucesso!",
+    "NomeParticipante": "Mylena",
+    "listaItens": [
+        "Chocolate",
+        "Celular"
+    ]
+}
+*********
+(_id 640df0a97c288d93a9e67d8a Marco Moreira)
+Método usado GET => http://localhost:3333/640df0a97c288d93a9e67d8a/item/
+
+Resposta obtida:
+
+{
+    "message": "Itens da lista de desejos recuperados com sucesso!",
+    "NomeParticipante": "Marco Moreira",
+    "listaItens": [
+        "Bola",
+        "Mouse s/ fio",
+        "Teclado"
+    ]
+}
+*********
+(_id 640df1c57c288d93a9e67d8c Júlio César)
+Método usado GET => http://localhost:3333/640df1c57c288d93a9e67d8c/item/
+
+Resposta obtida:
+
+{
+    "message": "Itens da lista de desejos recuperados com sucesso!",
+    "NomeParticipante": "Júlio César",
+    "listaItens": [
+        "PenDrive",
+        "Monitor",
+        "HD Externo"
+    ]
+}
+****************************************************************************************
+		FIM DO MOSTRAR ITENS DA LISTA PELO ID DA LISTA (ObjetoId)
+****************************************************************************************
+
+***********************************************************
+ADICIONAR ITENS NA LISTA PELO ID DA LISTA (ObjetoId)/item 
+***********************************************************
+Rota (addItemLista) usada para adicionar itens na lista de (Mylena) pelo id da lista:
+
+Método usado PUT => http://localhost:3333/640dedf07c288d93a9e67d88/item/
+
+Body usado para enviar requisição via(Postman):
+{
+  "item": "Tablet"
+}
+
+Resposta obtida:
+{
+    "success": true,
+    "listaDesejos": {
+        "_id": "640dedf07c288d93a9e67d88",
+        "idGrupo": "63fbe9b537013e5f5384de45",
+        "NomeGrupo": "Amigo Secreto Desafio UNIARAXÁ",
+        "idParticipante": "63fa414d306f4151724b7c11",
+        "NomeParticipante": "Mylena",
+        "listaItens": [
+            "Chocolate",
+            "Celular",
+            "Tablet"
+        ],
+        "__v": 1
+    }
+}
+*********
+Rota (addItemLista) usada para adicionar itens na lista de (Marco Moreira) pelo id da lista:
+
+Método usado PUT => http://localhost:3333/640df0a97c288d93a9e67d8a/item/
+
+Body usado para enviar requisição via(Postman):
+{
+  "item": "Tablet B"
+}
+
+Resposta obtida:
+{
+    "success": true,
+    "listaDesejos": {
+        "_id": "640df0a97c288d93a9e67d8a",
+        "idGrupo": "63fbe9b537013e5f5384de45",
+        "NomeGrupo": "Amigo Secreto Desafio UNIARAXÁ",
+        "idParticipante": "63fa414d306f4151724b7c11",
+        "NomeParticipante": "Marco Moreira",
+        "listaItens": [
+            "Bola",
+            "Mouse s/ fio",
+            "Teclado",
+            "Tablet B"
+        ],
+        "__v": 5
+    }
+}
+*********
+Rota (addItemLista) usada para adicionar itens na lista de (Júlio César) pelo id da lista:
+
+Método usado PUT => http://localhost:3333/640df1c57c288d93a9e67d8c/item/
+
+Body usado para enviar requisição via(Postman):
+{
+  "item": "Tablet C"
+}
+
+Resposta obtida:
+{
+    "success": true,
+    "listaDesejos": {
+        "_id": "640df1c57c288d93a9e67d8c",
+        "idGrupo": "63fbe9b537013e5f5384de45",
+        "NomeGrupo": "Amigo Secreto Desafio UNIARAXÁ",
+        "idParticipante": "63fa414d306f4151724b7c11",
+        "NomeParticipante": "Júlio César",
+        "listaItens": [
+            "PenDrive",
+            "Monitor",
+            "HD Externo",
+            "Tablet C"
+        ],
+        "__v": 1
+    }
+****************************************************************************************
+		FIM ADICIONAR ITENS NA LISTA PELO ID DA LISTA (ObjetoId)/item 
+****************************************************************************************
+
+
+**************************************************************************
+DELETANDO ITENS NA LISTA PELO ID DA LISTA (ObjetoId)/item/nome_do_item
+**************************************************************************
+
+Rota (delItemLista) usada para remover itens na lista de (Mylena) pelo id da lista:
+
+listaItens": "Chocolate(*Será retirado)","Celular","Tablet"
+
+Método usado DELETE => http://localhost:3333/640dedf07c288d93a9e67d88/item/Chocolate
+
+Resposta obtida:
+{
+    "success": true,
+    "listaDesejos": {
+        "_id": "640dedf07c288d93a9e67d88",
+        "idGrupo": "63fbe9b537013e5f5384de45",
+        "NomeGrupo": "Amigo Secreto Desafio UNIARAXÁ",
+        "idParticipante": "63fa414d306f4151724b7c11",
+        "NomeParticipante": "Mylena",
+        "listaItens": [
+            "Celular",
+            "Tablet"
+        ],
+        "__v": 2
+    }
+}
+*********
+
+Rota (delItemLista) usada para remover itens na lista de (Marco Moreira) pelo id da lista:
+
+listaItens": "Bola(*Será retirado)","Mouse s/ fio","Teclado","Tablet B"
+
+Método usado DELETE => http://localhost:3333/640df0a97c288d93a9e67d8a/item/Bola
+
+Resposta obtida:
+{
+    "success": true,
+    "listaDesejos": {
+        "_id": "640df0a97c288d93a9e67d8a",
+        "idGrupo": "63fbe9b537013e5f5384de45",
+        "NomeGrupo": "Amigo Secreto Desafio UNIARAXÁ",
+        "idParticipante": "63fa414d306f4151724b7c11",
+        "NomeParticipante": "Marco Moreira",
+        "listaItens": [
+            "Mouse s/ fio",
+            "Teclado",
+            "Tablet B"
+        ],
+        "__v": 6
+    }
+}
+*********
+
+Rota (delItemLista) usada para remover itens na lista de (Júlio César) pelo id da lista:
+
+listaItens": "PenDrive(*Será retirado)","Monitor","HD Externo","Tablet C"
+
+Método usado DELETE => http://localhost:3333/640df1c57c288d93a9e67d8c/item/PenDrive
+
+Resposta obtida:
+{
+    "success": true,
+    "listaDesejos": {
+        "_id": "640df1c57c288d93a9e67d8c",
+        "idGrupo": "63fbe9b537013e5f5384de45",
+        "NomeGrupo": "Amigo Secreto Desafio UNIARAXÁ",
+        "idParticipante": "63fa414d306f4151724b7c11",
+        "NomeParticipante": "Júlio César",
+        "listaItens": [
+            "Monitor",
+            "HD Externo",
+            "Tablet C"
+        ],
+        "__v": 2
+    }
+}
+****************************************************************************************
+		DELETANDO ITENS NA LISTA PELO ID DA LISTA (ObjetoId)/item/nome_do_item 
+****************************************************************************************
