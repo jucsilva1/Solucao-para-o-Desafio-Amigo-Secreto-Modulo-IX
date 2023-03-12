@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "JULIO CESAR RA-042401",
+  "description": "Desafio-Amigo-Secreto",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jucsilva1"
+    "url": "https://github.com/jucsilva1/Solucao-para-o-Desafio-Amigo-Secreto-Modulo-IX-UNIARAXA.git"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
@@ -19,6 +20,5 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.21"
-    
   }
 }
