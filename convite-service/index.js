@@ -13,8 +13,8 @@ const transporter = nodemailer.createTransport({
     ciphers: "SSLv3",
   },
   auth: {
-    user: "juc.silva1@hotmail.com",
-    pass: "n2n5x7U6a1Jcs@",
+    user: "seu_email",
+    pass: "seu_password",
   },
 });
 
@@ -22,7 +22,7 @@ app.post('/convite/enviaremail', (req, res) => {
   const { email, assunto, mensagem } = req.body;
 
   const mailOptions = {
-    from: 'juc.silva1@hotmail.com',
+    from: 'seu_email',
     to: email,
     subject: assunto,
     text: mensagem,
